@@ -1,0 +1,18 @@
+<!--api.wxml-->
+
+<!--
+include可以将目标文件除了<template/>的整个代码引入，相当于是拷贝到include位置
+-->
+
+<include src="../reference/include.wxml"/>
+
+<!--
+import可以在该文件中使用目标文件定义的template
+import有作用域的概念，即只会import目标文件中定义的template，而不会import目标文件import的template
+-->
+<import src="../reference/import.wxml"/>
+
+<!--使用...attrs遍历attrs的所有属性-->
+<template is="myTemplate" data="{{...attrs}}"/>
+
+

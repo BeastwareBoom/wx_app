@@ -1,0 +1,15 @@
+<!--logs.wxml-->
+<view class="container log-list">
+
+  <!--为日志列表添加一个头-->
+  <view class="header" bindtap="sayHello">
+
+    <!--jsx语法，第一层{}表示javascript语句，第二层表示取name属性-->
+    <text class="header-text">点我{{name}}</text>
+  </view>
+
+  <!-- 类似jsp中的迭代标签c:for -->
+  <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>

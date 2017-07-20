@@ -1,0 +1,9 @@
+<!--include.wxml-->
+<!--模板拥有自己的作用域，只能使用data传入的数据-->
+<template name="myTemplate">
+  <view>
+    <text>使用...attrs遍历属性并使用template模板显示：</text>
+    <text>{{attr1}}</text>
+    <text>{{attr2}}</text>
+  </view>
+</template>

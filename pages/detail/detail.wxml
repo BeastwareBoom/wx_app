@@ -1,0 +1,12 @@
+<view class="text">
+   <text>{{title}}</text>
+</view>
+
+<view class="text">
+  <text id="url" selectable="true">{{url}}</text>
+</view>
+
+<view class="btn">
+  <button bindtap="copyURL">复制链接</button>
+</view>
+ <!-- <video src="{{test_url}}" style="width:100%;height:240px;" id="myVideo"></video>  -->

@@ -1,0 +1,16 @@
+/* detail.wxss */
+
+#url{
+  margin-top: 10px;
+  font-size: 12px;
+  color: gray
+}
+
+.text{
+  padding: 10px;
+}
+
+.btn{
+  margin-top: 20px
+
+}

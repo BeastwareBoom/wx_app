@@ -1,0 +1,8 @@
+<!--include.wxml-->
+
+<!--include进入的内容，通过外部定义的wxss定义的style无效-->
+
+<view class="header" style="background:red">
+  <text>这里是include的header</text>
+</view>
+

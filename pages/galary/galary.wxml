@@ -1,0 +1,17 @@
+<!--galary.wxml   所有Page均在app.json文件中注册-->
+<view class="header">来自：GANK.IO</view>
+
+
+<scroll-view scroll-y="true" bindscrolltolower="onScrollToBottom" style="height:800px;" scroll-top="0px">
+  <!-- 类似jsp中的迭代标签c:for -->
+  <block wx:for="{{results}}" wx:for-item="result" wx:key="{{result._id}}">
+    <view class="item" bindtap="onItemTap" data-result="{{result}}" data-results="{{results}}">
+      <text class="result">{{index + 1}}. {{result.desc}}</text>
+      <image style="width:100%;height:400rpx;background-color: #fff;" src="{{result.url}}" mode="aspectFit"></image>
+    </view>
+  </block>
+</scroll-view>
+
+
+
+

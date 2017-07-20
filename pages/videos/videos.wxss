@@ -1,0 +1,14 @@
+/* videos.wxss */
+
+
+.item{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+ padding-left: 10rpx;
+ padding-right: 10rpx
+}
+
+.result{
+  text-decoration: underline
+}

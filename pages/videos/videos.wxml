@@ -1,0 +1,16 @@
+<!--videos.wxml   所有Page均在app.json文件中注册-->
+
+<scroll-view scroll-y="true" bindscrolltolower="onScrollToBottom" style="height:800px;" scroll-top="0px">
+  <!-- 类似jsp中的迭代标签c:for -->
+  <block wx:for="{{results}}" wx:for-item="result" wx:key="{{result._id}}">
+    <view class="item">
+
+    <!--使用navigator组件导航到新页面-->
+      <navigator url="../detail/detail?url={{result.url}}&title={{result.desc}}">
+        <text class="result">{{index + 1}}. {{result.desc}}</text>
+      </navigator>
+      <!-- <video src="{{result.url}}" controls="true" style="width:100%;height:240px;"></video>  -->
+    </view>
+  </block>
+</scroll-view>
+

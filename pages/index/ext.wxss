@@ -1,0 +1,13 @@
+
+/*
+定义时间的样式
+*/
+
+.time{
+   margin-top: 20px;
+}
+
+.time-text{
+  color: lightgrey;
+  font-size: 16px;
+}
