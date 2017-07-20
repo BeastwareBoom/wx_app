@@ -16,3 +16,42 @@ import有作用域的概念，即只会import目标文件中定义的template，
 <template is="myTemplate" data="{{...attrs}}"/>
 
 
+<!--底部弹窗action-sheet-->
+<button type="default" bindtap="actionSheetTap">弹出action sheet</button>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item class="item" bindtap="bind{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+<!--对话框modal-->
+<modal title="标题" confirm-text="confirm" cancel-text="cancel" hidden="{{modalHidden}}" bindconfirm="modalChange" bindcancel="modalChange">
+    这是对话框的内容。
+</modal>
+
+<modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2">
+    <view> 没有标题没有蒙层没有确定的modal </view>
+    <view> 内容可以插入节点 </view>
+</modal>
+
+<view class="btn-area">
+    <button type="default" bindtap="modalTap">点击弹出modal</button>
+    <button type="default" bindtap="modalTap2">点击弹出modal2</button>
+</view>
+
+<!--弹出通知toast-->
+<view class="body-view">
+    <toast hidden="{{toast2Hidden}}" duration="3000" bindchange="toast2Change">
+        duration为3秒
+    </toast>
+    <button type="default" bindtap="toast2Tap">点击弹出设置duration的toast</button>
+</view>
+
+<!--加载进度loading-->
+<view class="body-view">
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+    <button type="default" bindtap="loadingTap">点击弹出loading</button>
+</view>
