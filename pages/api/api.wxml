@@ -48,10 +48,20 @@ import有作用域的概念，即只会import目标文件中定义的template，
     <button type="default" bindtap="toast2Tap">点击弹出设置duration的toast</button>
 </view>
 
+<!--点击显示通过api显示toast-->
+<view class="body-view">
+  <button type="default" bindtap="_showToast">点击显示通过api显示toast</button>
+</view>
+
 <!--加载进度loading-->
 <view class="body-view">
     <loading hidden="{{hidden}}">
         加载中...
     </loading>
     <button type="default" bindtap="loadingTap">点击弹出loading</button>
+</view>
+
+<!--在当前页面显示导航条加载动画-->
+<view class="body-view">
+    <button type="default" bindtap="showNavLoading">在当前页面显示导航条加载动画，3秒后隐藏</button>
 </view>

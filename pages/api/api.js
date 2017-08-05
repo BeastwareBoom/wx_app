@@ -16,6 +16,15 @@ var pageObject = {
     hidden:true
   },
 
+  //在当前页面显示导航条加载动画
+  showNavLoading:function(){
+    wx.showNavigationBarLoading();
+    //3秒后隐藏导航条加载动画
+    setTimeout(function () {
+      wx.hideNavigationBarLoading()
+    }, 3000);
+  },
+
   //loading
   loadingTap: function () {
     this.setData({
@@ -41,6 +50,15 @@ var pageObject = {
   toast2Tap: function () {
     this.setData({
       toast2Hidden: false,
+    })
+  },
+
+  //点击显示toast
+  _showToast:function(){
+    wx.showToast({
+      title: '点击 显示的toast',
+      icon: 'success',
+      duration: 2000
     })
   },
 
